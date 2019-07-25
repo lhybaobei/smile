@@ -1,0 +1,1372 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>匈牙利命名法 | 夜雨</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/lhybaobei/smile/css/theme.min.css" ) <link>
+
+</head></html>
+<body class="home">
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">夜雨</span>
+                </div>
+            </a>
+        </div>
+        <ul class="menu hidden">
+            
+            <li rel="/2011/04182320.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2011/04182320.html" class="item ">
+                <a href="/archives" title="归档" class="icon-archive">&nbsp;归档</a>
+            </li>
+            
+            <li rel="/2011/04182320.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+        </div>
+    </section>
+</header>
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>匈牙利命名法</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2011-04-18T15:20:47.000Z">2011-04-18</time>
+    </p>
+    <div class="post-content">
+        <p><strong>匈牙利命名法</strong>计算机程序设计中的一种命名规则，用这种方法命名的变量显示了其数据类型。  </p>
+<p><strong>匈牙利命名法有两种：系统匈牙利命名法和匈牙利应用命名法。</strong> 匈牙利命名法被设计成语言独立的，并且首次在BCPL语言中被大量使用。由于BCPL只有机器字这一种数据类型，因此这种语言本身无法帮助程序员来记住变量的类型。匈牙利命名法通过明确每个变量的数据类型来解决这个问题。 在匈牙利命名法中，一个变量名由一个或多个小写字母开始，这些字母有助于记忆变量的类型和用处，紧跟着的就是程序员选择的任何名称。这个后半部分的首字母可以大写以区别前面的类型指示字母（参见驼峰式大小写）。  </p>
+<p>系统命名法与应用命名法的区别在于前缀的目的。  </p>
+<p>在系统匈牙利命名法中，前缀代表了变量的实际数据类型。例如：</p>
+<ul>
+<li><code>lAccountNum</code> :变量是一个_长整型_（”l”）;</li>
+<li><code>arru8NumberList</code> :变量是_一个无符号8位整型数组_（”arru8”）;</li>
+<li><code>szName</code> :变量是一个_零结束字符串_（”sz”），这是西蒙尼最开始建议的前缀之一。</li>
+</ul>
+<p>匈牙利应用命名法不表示实际数据类型，而是给出了变量_目的_的提示，或者说它代表了什么。</p>
+<ul>
+<li><code>rwPosition</code> :变量代表一个<em>行</em>（”rw”）。</li>
+<li><code>usName</code> :变量代表一个_非安全字符串_（”us”），需要在使用前处理。</li>
+<li><code>strName</code> :变量代表一个包含名字的字符串（”str”）但是没有指明这个字符串是如何实现的。</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><ul>
+<li><code>bBusy</code> : <a href="http://zh.wikipedia.org/wiki/%E5%B8%83%E5%B0%94%E5%9E%8B" target="_blank" rel="noopener">布尔型</a></li>
+<li><code>cApples</code> :项目计数</li>
+<li><code>dwLightYears</code> :双<a href="http://zh.wikipedia.org/wiki/%E5%AD%97_(%E8%AE%A1%E7%AE%97%E6%9C%BA)" title="字 (计算机)" target="_blank" rel="noopener">字</a>（系统）</li>
+<li><code>fBusy</code> : <a href="http://zh.wikipedia.org/wiki/%E5%B8%83%E5%B0%94%E5%9E%8B" target="_blank" rel="noopener">布尔型</a>（标记）</li>
+<li><code>nSize</code> : <a href="http://zh.wikipedia.org/wiki/%E6%95%B4%E5%9E%8B" title="整型" target="_blank" rel="noopener">整型</a>（系统）或计数（应用程序）</li>
+<li><code>iSize</code> : <a href="http://zh.wikipedia.org/wiki/%E6%95%B4%E5%9E%8B" title="整型" target="_blank" rel="noopener">整型</a>（系统）或索引（应用程序）</li>
+<li><code>fpPrice</code>: <a href="http://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E6%95%B0" target="_blank" rel="noopener">浮点数</a></li>
+<li><code>dbPi</code> : <a href="http://zh.wikipedia.org/wiki/%E9%9B%99%E5%80%8D%E7%B2%BE%E7%A2%BA%E6%B5%AE%E9%BB%9E%E6%95%B8" title="双倍精确浮点数" target="_blank" rel="noopener">双精度浮点数</a>（系统）</li>
+<li><code>pFoo</code> : <a href="http://zh.wikipedia.org/wiki/%E6%8C%87%E9%92%88" target="_blank" rel="noopener">指针</a></li>
+<li><code>rgStudents</code> :数组或范围</li>
+<li><code>szLastName</code> :零结束字符串</li>
+<li><code>u32Identifier</code> :无符号32位<a href="http://zh.wikipedia.org/wiki/%E6%95%B4%E5%9E%8B" title="整型" target="_blank" rel="noopener">整型</a>（系统）</li>
+<li><code>stTime</code> :时钟结构</li>
+<li><code>fnFunction</code> :函数名</li>
+</ul>
+<p>对于指针和<a href="http://zh.wikipedia.org/wiki/%E6%95%B0%E7%BB%84" target="_blank" rel="noopener">数组</a>来说，它们实际上并不是数据类型，因此通常在助记符后面跟着实际元素的类型。</p>
+<ul>
+<li><code>pszOwner</code> :指向零结束字符串的指针</li>
+<li><code>rgfpBalances</code> : <a href="http://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E6%95%B0" title="浮点数" target="_blank" rel="noopener">浮点</a>值的数组</li>
+</ul>
+<p>由于匈牙利命名法可以被应用在任何程序设计语言和环境中，因此被<a href="http://zh.wikipedia.org/wiki/%E5%BE%AE%E8%BD%AF" target="_blank" rel="noopener">微软</a>广泛用在C语言中，特别是在<a href="http://zh.wikipedia.org/wiki/Microsoft_Windows" target="_blank" rel="noopener">Microsoft Windows</a>里。由此一来，许多常见的匈牙利命名法的结构都和Windows紧密相关：</p>
+<ul>
+<li><code>hwndFoo</code> :窗口句柄</li>
+<li><code>lpszBar</code> :指向零结束字符串的长指针</li>
+</ul>
+<p>这种命名法又是在<a href="http://zh.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener">C++</a>中被扩展而包含变量的<a href="http://zh.wikipedia.org/wiki/%E4%BD%9C%E7%94%A8%E5%9F%9F" target="_blank" rel="noopener">作用域</a>，由一个下划线隔开：</p>
+<ul>
+<li><code>g_nWheels</code> :全局命名空间的成员，整型</li>
+<li><code>m_nWheels</code> :结构体/类成员，整型</li>
+</ul>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/学习经验/">学习经验</a>|<a class="cat-link" href="/categories/学习经验/默认分类/">默认分类</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+    <div class="article-share clearfix text-center">
+      <div class="share-area">
+        <span class="share-txt">分享到：</span>
+        <i class="icon-weibo" title="微博" data-type="weibo"></i>
+        <i class="icon-qzone" title="QQ空间" data-type="qzone"></i>
+        <i class="icon-qq" title="QQ" data-type="qq"></i>
+        <i class="icon-douban" title="豆瓣" data-type="douban"></i>
+      </div>
+    </div>
+
+
+    <div class="article-nav clearfix">
+        
+        <span class="prev fl">
+            上一篇<br >
+            <a href="/2011/04182326.html">
+                
+                    驼峰式大小写
+                
+            </a>
+        </span>
+        
+    
+        
+        <span class="next fr">
+            下一篇<br >
+            <a href="/2011/04172329.html">
+                
+                    大陆剧《宫》演员表
+                
+            </a>
+        </span>
+        
+    </div>
+
+<div id="comment" class="comment"></div>
+            </div>
+        </section>
+        <aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <ul class="widget-bd">
+            
+            <li>
+                <a href="/categories/默认分类/">默认分类</a>
+                <span class="badge">(7)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/大事件记载/">大事件记载</a>
+                <span class="badge">(12)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/个人心得/">个人心得</a>
+                <span class="badge">(61)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/健康常识/">健康常识</a>
+                <span class="badge">(46)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/生活常识/">生活常识</a>
+                <span class="badge">(32)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/技术总结/">技术总结</a>
+                <span class="badge">(15)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/演唱会/">演唱会</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/学习经验/">学习经验</a>
+                <span class="badge">(62)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/剧情讨论/">剧情讨论</a>
+                <span class="badge">(64)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/Windows-Mobile开发/">Windows Mobile开发</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/招聘工作/">招聘工作</a>
+                <span class="badge">(19)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/鼻炎/">鼻炎</a>
+                <span class="badge">(5)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/我的生活菜谱/">我的生活菜谱</a>
+                <span class="badge">(17)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/健康常识/鼻炎/">鼻炎</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/减肥日记/">减肥日记</a>
+                <span class="badge">(110)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/学习经验/默认分类/">默认分类</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/装修知识/">装修知识</a>
+                <span class="badge">(4)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/生活常识/驾驶知识/">驾驶知识</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/宝宝/">宝宝</a>
+                <span class="badge">(3)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/驾驶知识/">驾驶知识</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/孕育经验/">孕育经验</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/宝宝/简笔画/">简笔画</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/我的运动项目/">我的运动项目</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/剧情讨论/默认分类/">默认分类</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+        </ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <div class="widget-bd tag-wrap">
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯半决赛/" title="2010世界杯半决赛">
+                    2010世界杯半决赛 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/马拉多纳/" title="马拉多纳">
+                    马拉多纳 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯16强/" title="2010世界杯16强">
+                    2010世界杯16强 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/世界杯1-8决赛赛程表/" title="世界杯1/8决赛赛程表">
+                    世界杯1/8决赛赛程表 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/南非世界杯/" title="南非世界杯">
+                    南非世界杯 (2)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/1-4决赛/" title="1/4决赛">
+                    1/4决赛 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯/" title="2010世界杯">
+                    2010世界杯 (2)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/八强/" title="八强">
+                    八强 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/世界杯赛程表/" title="世界杯赛程表">
+                    世界杯赛程表 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/赛程表/" title="赛程表">
+                    赛程表 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/12580答题/" title="12580答题">
+                    12580答题 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯吉祥物/" title="2010世界杯吉祥物">
+                    2010世界杯吉祥物 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/南非世界杯吉祥物/" title="南非世界杯吉祥物">
+                    南非世界杯吉祥物 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/扎库米/" title="扎库米">
+                    扎库米 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2011下半年苏州软考，苏州软考缴费地址，苏州软考缴费新地址/" title="2011下半年苏州软考，苏州软考缴费地址，苏州软考缴费新地址">
+                    2011下半年苏州软考，苏州软考缴费地址，苏州软考缴费新地址 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯决赛/" title="2010世界杯决赛">
+                    2010世界杯决赛 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯决赛赛程/" title="2010世界杯决赛赛程">
+                    2010世界杯决赛赛程 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2012年假期/" title="2012年假期">
+                    2012年假期 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2012年放假安排/" title="2012年放假安排">
+                    2012年放假安排 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/健脾/" title="健脾">
+                    健脾 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/运动健脾胃/" title="运动健脾胃">
+                    运动健脾胃 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/食疗补脾胃/" title="食疗补脾胃">
+                    食疗补脾胃 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/c-快捷键/" title="c#快捷键">
+                    c#快捷键 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/visual-studio快捷键/" title="visual studio快捷键">
+                    visual studio快捷键 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/godaddy-优惠码/" title="godaddy 优惠码">
+                    godaddy 优惠码 (2)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/prom-code/" title="prom code">
+                    prom code (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/source-code/" title="source code">
+                    source code (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/100天/" title="100天">
+                    100天 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/林俊杰/" title="林俊杰">
+                    林俊杰 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/林俊杰北京演唱会/" title="林俊杰北京演唱会">
+                    林俊杰北京演唱会 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/Michael-Jackson/" title="Michael Jackson">
+                    Michael Jackson (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/杰克逊/" title="杰克逊">
+                    杰克逊 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/迈克尔杰克逊/" title="迈克尔杰克逊">
+                    迈克尔杰克逊 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/再生缘片尾曲/" title="再生缘片尾曲">
+                    再生缘片尾曲 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/林峰/" title="林峰">
+                    林峰 (6)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/记得忘记/" title="记得忘记">
+                    记得忘记 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/记得忘记歌词/" title="记得忘记歌词">
+                    记得忘记歌词 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/vmware安装/" title="vmware安装">
+                    vmware安装 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/windows-mobile/" title="windows mobile">
+                    windows mobile (2)
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+    </section>
+    
+</aside>
+    </div>
+    <footer class="footer">
+    &copy; 2009-2019
+    <a href="/">夜雨</a>
+</footer>
+<div class="to-top" title="返回顶部">
+    <i class="icon-top"></i>
+</div>
+<script src='//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js' defer)></script>
+
+    <script src='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js' defer></script>
+
+
+    <script src='//cdn.jsdelivr.net/gh/lhybaobei/smile/js/theme.min.js' defer></script>
+
+</body>
+</html>

@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>强制访问控制（MAC） | 夜雨</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/lhybaobei/smile/css/theme.min.css" ) <link>
+
+</head></html>
+<body class="home">
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">夜雨</span>
+                </div>
+            </a>
+        </div>
+        <ul class="menu hidden">
+            
+            <li rel="/2011/05042131.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2011/05042131.html" class="item ">
+                <a href="/archives" title="归档" class="icon-archive">&nbsp;归档</a>
+            </li>
+            
+            <li rel="/2011/05042131.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+        </div>
+    </section>
+</header>
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>强制访问控制（MAC）</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2011-05-04T13:31:04.000Z">2011-05-04</time>
+    </p>
+    <div class="post-content">
+        <p>强制访问控制是“强加”给访问主体的，即系统强制主体服从访问控制政策。强制访问控制（MAC）的主要特征是对所有主体及其所控制的客体（例如：进程、文件、段、设备）实施强制访问控制。为这些主体及客体指定敏感标记，这些标记是等级分类和非等级类别的组合，它们是实施强制访问控制的依据。系统通过比较主体和客体的敏感标记来决定一个主体是否能够访问某个客体。用户的程序不能改变他自己及任何其它客体的敏感标记，从而系统可以防止特洛伊木马的攻击。  </p>
+<p>强制访问控制一般与自主访问控制结合使用，并且实施一些附加的、更强的访问限制。一个主体只有通过了自主与强制性访问限制检查后，才能访问某个客体。用户可以利用自主访问控制来防范其它用户对自己客体的攻击，由于用户不能直接改变强制访问控制属性，所以强制访问控制提供了一个不可逾越的、更强的安全保护层以防止其它用户偶然或故意地滥用自主访问控制。  </p>
+<p>强制访问策略将每个用户及文件赋于一个访问级别，如，最高秘密级（Top Secret），秘密级（Secret），机密级（Confidential）及无级别级（Unclassified）。其级别为T&gt;S&gt;C&gt;U，系统根据主体和客体的敏感标记来决定访问模式。访问模式包括：  </p>
+<p>下读（read down）：用户级别大于文件级别的读操作；  </p>
+<p>上写（Write up）：用户级别小于文件级别的写操作；  </p>
+<p>下写（Write down）：用户级别等于文件级别的写操作；  </p>
+<p>上读（read up）：用户级别小于文件级别的读操作；  </p>
+<p><a href="https://res.cloudinary.com/lhybaobei/image/upload/v1563853374/12_a3eeqn.gif" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/lhybaobei/image/upload/v1563853374/12_a3eeqn.gif" alt title="1"></a>  </p>
+<p>图8.1 Bell-Lapadula安全模型  </p>
+<p>依据Bell-Lapadula安全模型所制定的原则是利用不上读/不下写来保证数据的保密性。见图8.1。即不允许低信任级别的用户读高敏感度的信息，也不允许高敏感度的信息写入低敏感度区域，禁止信息从高级别流向低级别。强制访问控制通过这种梯度安全标签实现信息的单向流通。  </p>
+<p>依据Biba安全模型所制定的原则是利用不下读/不上写来保证数据的完整性。见图8.2。在实际应用中，完整性保护主要是为了避免应用程序修改某些重要的系统程序或系统数据库。  </p>
+<p><a href="https://res.cloudinary.com/lhybaobei/image/upload/v1563853373/22_n9gnxb.gif" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/lhybaobei/image/upload/v1563853373/22_n9gnxb.gif" alt title="2"></a>  </p>
+<p>图8.2 Biba安全模型  </p>
+<p>MAC通常用于多级安全军事系统。  </p>
+<p>强制访问控制对专用的或简单的系统是有效的，但对通用、大型系统并不那么有效。一般强制访问控制采用以下几种方法：</p>
+<blockquote>
+<p>（1）限制访问控制。</p>
+</blockquote>
+<p>一个持洛伊木马可以攻破任何形式的自主访问控制，由于自主控制方式允许用户程序来修改他拥有文件的存取控制表，因而为非法者带来可乘之机。MAC可以不提供这一方便，在这类系统中，用户要修改存取控制表的唯一途径是请求一个特权系统调用。该调用的功能是依据用户终端输入的信息，而不是靠另一个程序提供的信息来修改存取控制信息。</p>
+<blockquote>
+<p>（2）过程控制</p>
+</blockquote>
+<p>在通常的计算机系统中，只要系统允许用户自己编程，就没办法杜绝特洛伊木马。但可以对其过程采取某些措施，这种方法称为过程控制。例如，警告用户不要运行系统目录以外的任何程序。提醒用户注意，如果偶然调用一个其它目录的文件时，不要做任何动作，等等。需要说明的一点是，这些限制取决于用户本身执行与否。</p>
+<blockquote>
+<p>（3）系统限制</p>
+</blockquote>
+<p>要对系统的功能实施一些限制。比如，限制共享文件，但共享文件是计算机系统的优点，所以是不可能加以完全限制的。再者，就是限制用户编程。不过这种做法只适用于某些专用系统。在大型的，通用系统中，编程能力是不可能去除的。</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/技术总结/">技术总结</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+                
+                    <a href="/tags/DAC/" title="DAC">DAC</a> / 
+                
+                    <a href="/tags/MAC/" title="MAC">MAC</a>
+                
+            
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+    <div class="article-share clearfix text-center">
+      <div class="share-area">
+        <span class="share-txt">分享到：</span>
+        <i class="icon-weibo" title="微博" data-type="weibo"></i>
+        <i class="icon-qzone" title="QQ空间" data-type="qzone"></i>
+        <i class="icon-qq" title="QQ" data-type="qq"></i>
+        <i class="icon-douban" title="豆瓣" data-type="douban"></i>
+      </div>
+    </div>
+
+
+    <div class="article-nav clearfix">
+        
+        <span class="prev fl">
+            上一篇<br >
+            <a href="/2011/06192248.html">
+                
+                    今天心情不好
+                
+            </a>
+        </span>
+        
+    
+        
+        <span class="next fr">
+            下一篇<br >
+            <a href="/2011/04210251.html">
+                
+                    食物注意事项
+                
+            </a>
+        </span>
+        
+    </div>
+
+<div id="comment" class="comment"></div>
+            </div>
+        </section>
+        <aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <ul class="widget-bd">
+            
+            <li>
+                <a href="/categories/默认分类/">默认分类</a>
+                <span class="badge">(7)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/大事件记载/">大事件记载</a>
+                <span class="badge">(12)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/个人心得/">个人心得</a>
+                <span class="badge">(61)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/健康常识/">健康常识</a>
+                <span class="badge">(46)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/生活常识/">生活常识</a>
+                <span class="badge">(32)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/技术总结/">技术总结</a>
+                <span class="badge">(15)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/演唱会/">演唱会</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/学习经验/">学习经验</a>
+                <span class="badge">(62)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/剧情讨论/">剧情讨论</a>
+                <span class="badge">(64)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/Windows-Mobile开发/">Windows Mobile开发</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/招聘工作/">招聘工作</a>
+                <span class="badge">(19)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/鼻炎/">鼻炎</a>
+                <span class="badge">(5)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/我的生活菜谱/">我的生活菜谱</a>
+                <span class="badge">(17)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/健康常识/鼻炎/">鼻炎</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/减肥日记/">减肥日记</a>
+                <span class="badge">(110)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/学习经验/默认分类/">默认分类</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/装修知识/">装修知识</a>
+                <span class="badge">(4)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/生活常识/驾驶知识/">驾驶知识</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/宝宝/">宝宝</a>
+                <span class="badge">(3)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/驾驶知识/">驾驶知识</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/孕育经验/">孕育经验</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/宝宝/简笔画/">简笔画</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/我的运动项目/">我的运动项目</a>
+                <span class="badge">(2)</span>
+            </li>
+            
+            <li>
+                <a href="/categories/剧情讨论/默认分类/">默认分类</a>
+                <span class="badge">(1)</span>
+            </li>
+            
+        </ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <div class="widget-bd tag-wrap">
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯半决赛/" title="2010世界杯半决赛">
+                    2010世界杯半决赛 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/马拉多纳/" title="马拉多纳">
+                    马拉多纳 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯16强/" title="2010世界杯16强">
+                    2010世界杯16强 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/世界杯1-8决赛赛程表/" title="世界杯1/8决赛赛程表">
+                    世界杯1/8决赛赛程表 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/南非世界杯/" title="南非世界杯">
+                    南非世界杯 (2)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/1-4决赛/" title="1/4决赛">
+                    1/4决赛 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯/" title="2010世界杯">
+                    2010世界杯 (2)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/八强/" title="八强">
+                    八强 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/世界杯赛程表/" title="世界杯赛程表">
+                    世界杯赛程表 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/赛程表/" title="赛程表">
+                    赛程表 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/12580答题/" title="12580答题">
+                    12580答题 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯吉祥物/" title="2010世界杯吉祥物">
+                    2010世界杯吉祥物 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/南非世界杯吉祥物/" title="南非世界杯吉祥物">
+                    南非世界杯吉祥物 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/扎库米/" title="扎库米">
+                    扎库米 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2011下半年苏州软考，苏州软考缴费地址，苏州软考缴费新地址/" title="2011下半年苏州软考，苏州软考缴费地址，苏州软考缴费新地址">
+                    2011下半年苏州软考，苏州软考缴费地址，苏州软考缴费新地址 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯决赛/" title="2010世界杯决赛">
+                    2010世界杯决赛 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2010世界杯决赛赛程/" title="2010世界杯决赛赛程">
+                    2010世界杯决赛赛程 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2012年假期/" title="2012年假期">
+                    2012年假期 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/2012年放假安排/" title="2012年放假安排">
+                    2012年放假安排 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/健脾/" title="健脾">
+                    健脾 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/运动健脾胃/" title="运动健脾胃">
+                    运动健脾胃 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/食疗补脾胃/" title="食疗补脾胃">
+                    食疗补脾胃 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/c-快捷键/" title="c#快捷键">
+                    c#快捷键 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/visual-studio快捷键/" title="visual studio快捷键">
+                    visual studio快捷键 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/godaddy-优惠码/" title="godaddy 优惠码">
+                    godaddy 优惠码 (2)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/prom-code/" title="prom code">
+                    prom code (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/source-code/" title="source code">
+                    source code (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/100天/" title="100天">
+                    100天 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/林俊杰/" title="林俊杰">
+                    林俊杰 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/林俊杰北京演唱会/" title="林俊杰北京演唱会">
+                    林俊杰北京演唱会 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/Michael-Jackson/" title="Michael Jackson">
+                    Michael Jackson (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/杰克逊/" title="杰克逊">
+                    杰克逊 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/迈克尔杰克逊/" title="迈克尔杰克逊">
+                    迈克尔杰克逊 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/再生缘片尾曲/" title="再生缘片尾曲">
+                    再生缘片尾曲 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/林峰/" title="林峰">
+                    林峰 (6)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/记得忘记/" title="记得忘记">
+                    记得忘记 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/记得忘记歌词/" title="记得忘记歌词">
+                    记得忘记歌词 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/vmware安装/" title="vmware安装">
+                    vmware安装 (1)
+                </a>
+                
+            
+                
+                <a class="tag-item" href="/tags/windows-mobile/" title="windows mobile">
+                    windows mobile (2)
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+    </section>
+    
+</aside>
+    </div>
+    <footer class="footer">
+    &copy; 2009-2019
+    <a href="/">夜雨</a>
+</footer>
+<div class="to-top" title="返回顶部">
+    <i class="icon-top"></i>
+</div>
+<script src='//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js' defer)></script>
+
+    <script src='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js' defer></script>
+
+
+    <script src='//cdn.jsdelivr.net/gh/lhybaobei/smile/js/theme.min.js' defer></script>
+
+</body>
+</html>
