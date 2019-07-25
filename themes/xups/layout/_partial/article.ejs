@@ -1,0 +1,85 @@
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span><%= post.title %></span></h3>
+    </header>
+    <p class="post-meta text-center">
+        <%- post.author || 'Jelon' %> 发表于
+        <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
+    </p>
+    <div class="post-content">
+        <%- post.content %>
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <%-
+            list_categories(post.categories, {
+                show_count: false,
+                class: 'cat',
+                style: 'none',
+                separator: '|'
+            })
+            %>
+        </span>
+        <span class="post-tags">
+            标签：
+            <% if (post.tags && post.tags.length) { %>
+                <% post.tags.forEach(function(tag, i) { %>
+                    <%- link_to(tag.path, tag.name) %><% if (i != post.tags.length - 1) { %> / <% } %>
+                <% }); %>
+            <% } %>
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+<% if (theme.share) { %>
+    <div class="article-share clearfix text-center">
+      <div class="share-area">
+        <span class="share-txt">分享到：</span>
+        <i class="icon-weibo" title="微博" data-type="weibo"></i>
+        <i class="icon-qzone" title="QQ空间" data-type="qzone"></i>
+        <i class="icon-qq" title="QQ" data-type="qq"></i>
+        <i class="icon-douban" title="豆瓣" data-type="douban"></i>
+      </div>
+    </div>
+<% } %>
+<% if (post.prev || post.next) { %>
+    <div class="article-nav clearfix">
+        <% if (post.prev) { %>
+        <span class="prev fl">
+            上一篇<br >
+            <a href="<%- url_for(post.prev.path) %>">
+                <% if (post.prev.title) { %>
+                    <%= post.prev.title %>
+                <% } else { %>
+                    无标题
+                <% } %>
+            </a>
+        </span>
+        <% } else { %>
+        <span class="prev fl">
+            上一篇<br >
+            <a href="javascript: void(0);">没有上一篇了</a>
+        </span>
+        <% } %>
+    
+        <% if (post.next) { %>
+        <span class="next fr">
+            下一篇<br >
+            <a href="<%- url_for(post.next.path) %>">
+                <% if (post.next.title) { %>
+                    <%= post.next.title %>
+                <% } else { %>
+                    无标题
+                <% } %>
+            </a>
+        </span>
+        <% } else { %>
+        <span class="next fr">
+            下一篇<br >
+            <a href="javascript: void(0);">没有下一篇了</a>
+        </span>
+        <% } %>
+    </div>
+<% } %>
+<div id="comment" class="comment"></div>

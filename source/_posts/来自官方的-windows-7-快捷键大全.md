@@ -1,0 +1,77 @@
+---
+title: 来自官方的 windows 7 快捷键大全
+tags:
+  - Win7
+  - 快捷键
+url: 1174.html
+id: 1174
+categories:
+  - 学习经验
+date: 2011-09-07 00:08:38
+---
+
+1\. 轻松访问键盘快捷方式
+--------------
+
+下表包含了可以有助于使计算机更易于使用的键盘快捷方式。 按键 功能 按住右 Shift 八秒钟 启用和关闭筛选键 按左 Alt+左 Shift+PrtScn（或 PrtScn） 启用或关闭高对比度 按左 Alt+左 Shift+Num Lock 启用或关闭鼠标键 按 Shift 五次 启用或关闭粘滞键 按住 Num Lock 五秒钟 启用或关闭切换键 Windows 徽标键 + U 打开轻松访问中心
+
+2\. 常规键盘快捷方式
+------------
+
+下表包含了常规键盘快捷方式。 按键 功能  
+  
+F1 显示帮助 Ctrl+C 复制选择的项目 Ctrl+X 剪切选择的项目 Ctrl+V 粘贴选择的项目 Ctrl+Z 撤消操作 Ctrl+Y 重新执行某项操作 Delete 删除所选项目并将其移动到“回收站” Shift+Delete 不先将所选项目移动到“回收站”而直接将其删除 F2 重命名选定项目 Ctrl+向右键 将光标移动到下一个字词的起始处 Ctrl+向左键 将光标移动到上一个字词的起始处 Ctrl+向下键 将光标移动到下一个段落的起始处 Ctrl+向上键 将光标移动到上一个段落的起始处 Ctrl+Shift 加某个箭头键 选择一块文本 Shift 加任意箭头键 在窗口中或桌面上选择多个项目，或者在文档中选择文本 Ctrl 加任意箭头键+空格键 选择窗口中或桌面上的多个单个项目 Ctrl+A 选择文档或窗口中的所有项目 F3 搜索文件或文件夹 Alt+Enter 显示所选项的属性 Alt+F4 关闭活动项目或者退出活动程序 Alt+空格键 为活动窗口打开快捷方式菜单 Ctrl+F4 关闭活动文档（在允许同时打开多个文档的程序中） Alt+Tab 在打开的项目之间切换 Ctrl+Alt+Tab 使用箭头键在打开的项目之间切换 Ctrl+鼠标滚轮 更改桌面上的图标大小 Windows 徽标键 + Tab 使用 Aero Flip 3-D 循环切换任务栏上的程序 Ctrl + Windows 徽标键 + Tab 通过 Aero Flip 3-D 使用箭头键循环切换任务栏上的程序 Alt+Esc 以项目打开的顺序循环切换项目 F6 在窗口中或桌面上循环切换屏幕元素 F4 在 Windows 资源管理器中显示地址栏列表 Shift+F10 显示选定项目的快捷菜单 Ctrl+Esc 打开「开始」菜单 Alt+加下划线的字母 显示相应的菜单 Alt+加下划线的字母 执行菜单命令（或其他有下划线的命令） F10 激活活动程序中的菜单栏 向右键 打开右侧的下一个菜单或者打开子菜单 向左键 打开左侧的下一个菜单或者关闭子菜单 F5 刷新活动窗口 Alt+向上键 在 Windows 资源管理器中查看上一级文件夹 Esc 取消当前任务 Ctrl+Shift+Esc 打开任务管理器 插入 CD 时按住 Shift 阻止 CD 自动播放
+
+3\. 对话框键盘快捷方式
+-------------
+
+下表包含了在对话框中使用的键盘快捷方式。 按键 功能 Ctrl+Tab 在选项卡上向前移动 Ctrl+Shift+Tab 在选项卡上向后移动 Tab 在选项上向前移动 Shift+Tab 在选项上向后移动 Alt+加下划线的字母 执行与该字母匹配的命令（或选择选项） Enter 对于许多选定命令代替单击鼠标 空格键 如果活动选项是复选框，则选中或清除该复选框 箭头键 如果活动选项是一组选项按钮，则选择某个按钮 F1 显示帮助 F4 显示活动列表中的项目 Backspace 如果在“另存为”或“打开”对话框中选中了某个文件夹，则打开上一级文件夹
+
+4\. Windows 徽标键相关的快捷键 
+----------------------
+
+Windows徽标键就是显示为Windows旗帜，或标有文字Win或Windows的按键，以下简称Win键。XP时代有4个经典的 Win 键组合：R/E/F/L。到了 Win7，花样更多了。 Win：打开或关闭开始菜单。 Win + Pause：显示系统属性对话框。 Win + D：显示桌面。 Win + M：最小化所有窗口。 Win + SHIFT + M：还原最小化窗口到桌面上。 Win + E：打开我的电脑 Win + F：搜索文件或文件夹。 Ctrl + Win + F：搜索计算机（如果您在网络上） 。 Win + L：锁定您的计算机或切换用户。 Win + R：打开运行对话框。 Win + T：切换任务栏上的程序（感觉是和alt+ESC 一样 ） Win + 数字：让位于任务栏指定位置（按下的数字作为序号）的程序，新开一个实例。（感觉这个比较新颖，貌似快速启动。） Shift + Windows logo key +number：Start a new instance of the program pinned to the taskbar in the position indicated by the number. Ctrl + Win + 数字：让位于任务栏指定位置（按下的数字作为序号）的程序，切换到上一次的活动窗口。 Ctrl+Windows logo key +number：Switch to the last active window of the program pinned to the taskbar in the position indicated by the number. ALT + Win + 数字：让位于任务栏指定位置（按下的数字作为序号）的程序，显示跳转清单。 Alt+Windows logo key +number： Open the Jump List for the program pinned to the taskbar in the position indicated by the number. Win + TAB：循环切换任务栏上的程序并使用的Aero三维效果。 Ctrl + Win + TAB：使用方向键来循环循环切换任务栏上的程序，并使用的Aero三维效果。 按Ctrl + Win + B：切换到在通知区域中显示信息的程序 Win + 空格：预览桌面。 Win + ↑：最大化窗口。 Win + ↓：最小化窗口。 Win + ←：最大化到窗口左侧的屏幕上。 Win + →：最大化窗口到右侧的屏幕上。 Win + Home：最小化所有窗口，除了当前激活窗口。 Win+ SHIFT + ↑：拉伸窗口的到屏幕的顶部和底部。 Win+ SHIFT + →/←：移动一个窗口，从一个显示器到另一个。 Win + P：选择一个演示文稿显示模式。 Win + G：循环切换侧边栏的小工具。 Win + U：打开轻松访问中心。 Win + x：打开Windows移动中心。
+
+5\. Windows Explorer相关快捷键
+-------------------------
+
+Ctrl+N 打开新窗口 Ctrl+Shift+N 新建文件夹 End 显示活动窗口的底部 Home 显示活动窗口的顶部 F11 最大化或最小化活动窗口 Num Lock+小键盘星号(*) 显示选中文件夹的所有子文件夹 Num Lock+小键盘加号(+) 显示选中文件夹的内容 Num Lock+小键盘减号(-) 折叠选中文件夹 左方向键 折叠当前展开的选中文件夹或选中上层文件夹 Alt+Enter 打开选中项目的属性对话框 Alt+P 显示预览窗格 Alt+左方向键 切换到前一次打开的文件夹 右方向键 显示（展开）当前选中项目或选中第一个子文件夹 Alt+右方向键 切换到下一次后打开的文件夹 Alt+上方向键 打开上层文件夹 Ctrl+鼠标滚轮 改变文件和文件夹图标的大小和外观 Alt+D 选中地址栏（定位到地址栏） Ctrl+E 选中搜索框（定位到搜索框）
+
+6\. 放大镜键盘快捷方式
+-------------
+
+下表包含了使用放大镜的键盘快捷方式。 按键 功能 Windows 徽标键 + 加号或减号 放大或缩小 Ctrl+Alt+空格键 显示鼠标指针 Ctrl+Alt+F 切换到全屏模式 Ctrl+Alt+L 切换到镜头模式 Ctrl+Alt+D 切换到停靠模式 Ctrl+Alt+I 反色 Ctrl+Alt+箭头键 按箭头键的方向平移 Ctrl+Alt+R 调整镜头的大小 Windows 徽标键 + Esc 退出放大镜
+
+7\. 远程桌面相关快捷键
+-------------
+
+Alt+Page Up 按从左向右顺序切换程序 Alt+Page Down 按从右向左切换程序 Alt+Insert 按程序打开先后顺序循环切换程序 Alt+Home 显示“开始”菜单 Ctrl+Alt+Break 在窗口模式和全屏之间切换 Ctrl+Alt+End 显示Windows安全性对话框 Alt+Delete 显示当前窗口的系统菜单 Ctrl+Alt+-（小键盘减号） 当前活动窗口截图 Ctrl+Alt++（小键盘加号） 全屏截图 Ctrl+Alt+向右键 从远程桌面控件“跳转”到主机程序中的控件（如按钮或文本框）。将远程桌面控件嵌入到其他（主机）程序后，此功能非常有用。 Ctrl+Alt+向左键 从远程桌面控件“跳转”到主机程序中的控件（如按钮或文本框）。将远程桌面控件嵌入到其他（主机）程序后，此功能非常有用。
+
+8\. 画图键盘快捷方式
+------------
+
+下表包含了使用画图的键盘快捷方式。 按键 功能 Ctrl+N 创建新的图片 Ctrl+O 打开现有图片 Ctrl+S 将更改保存到图片 F12 将此图片另存为新文件 Ctrl+P 打印图片 Alt+F4 关闭图片及其画图窗口 Ctrl+Z 撤消更改 Ctrl+Y 恢复更改 Ctrl+A 选择整个图片 Ctrl+X 剪切选择内容 Ctrl+C 将选择内容复制到剪贴板 Ctrl+V 从剪贴板粘贴选择内容 向右键 将选择内容或活动图形向右移动一个像素 向左键 将选择内容或活动图形向左移动一个像素 向下键 将选择内容或活动图形向下移动一个像素 向上键 将选择内容或活动图形向上移动一个像素 Esc 取消某个选择 Delete 删除某个选择 Ctrl+B 粗体选择文本 Ctrl++ 将画笔、直线或形状轮廓的宽度增加一个像素 Ctrl+- 将画笔、直线或形状轮廓的宽度减少一个像素 Ctrl+I 将所选文本改为斜体 Ctrl+U 为所选文本添加下划线 Ctrl+E 打开“属性”对话框 Ctrl+W 打开“调整大小和扭曲”对话框 Ctrl+Page Up 放大 Ctrl+Page Down 缩小 F11 以全屏模式查看图片 Ctrl+R 显示或隐藏标尺 Ctrl+G 显示或隐藏网格线 F10 或 Alt 显示快捷键提示 Shift+F10 显示当前快捷菜单 F1 打开“画图”帮助
+
+9\. 写字板的键盘快捷方式
+--------------
+
+按键 功能 Ctrl+N 新建一个文档 Ctrl+O 打开一个现有文档 Ctrl+S 将更改保存到文档 F12 将此文档另存为新文件 Ctrl+P 打印文档 Alt+F4 关闭“写字板” Ctrl+Z 撤消更改 Ctrl+Y 恢复更改 Ctrl+A 选择整个文档 Ctrl+X 剪切选择内容 Ctrl+C 将选择内容复制到剪贴板 Ctrl+V 从剪贴板粘贴选择内容 Ctrl+B 将所选文本改为粗体 Ctrl+I 将所选文本改为斜体 Ctrl+U 为所选文本添加下划线 Ctrl+= 使选择的文本成为下标 Ctrl+Shift+= 使选择的文本成为上标 Ctrl+L 向左对齐文本 Ctrl+E 向中心对齐文本 Ctrl+R 向右对齐文本 Ctrl+J 对齐文本 Ctrl+1 设置单倍行距 Ctrl+2 设置双倍行距 Ctrl+5 将行距设置为 1.5 Ctrl+Shift+> 增加字体大小 Ctrl+Shift+< 减小字体大小 Ctrl+Shift+A 将字符更改为全部使用大写字母 Ctrl+Shift+L 更改项目符号样式 Ctrl+D 插入 Microsoft 画图图片 Ctrl+F 在文档中查找文本 F3 在“查找”对话框中查找文本的下一个实例 Ctrl+H 在文档中替换文本 Ctrl+向左键 将光标向左移动一个字 Ctrl+向右键 将光标向右移动一个字 Ctrl+向上键 将光标移动到上一行 Ctrl+向下键 将光标移动到下一行 Ctrl+Home 移动到文档的开头 Ctrl+End 移动到文档的结尾 Ctrl+Page Up 向上移动一个页面 Ctrl+Page Down 向下移动一个页面 Ctrl+Delete 删除下一个字 F10 显示快捷键提示 Shift+F10 显示当前快捷菜单 F1 打开“写字板”帮助
+
+10\. 计算器的键盘快捷方式
+---------------
+
+按键 功能 Atl+1 切换到标准模式 Alt+2 切换到科学型模式 Alt+3 切换到程序员模式 Alt+4 切换到统计信息模式 Ctrl+E 打开日期计算 Ctrl+H 将计算历史记录打开或关闭 Ctrl+U 打开单位转换 Alt+C 计算或解决日期计算和工作表 F1 打开“计算器”帮助 Ctrl+Q 按下 M- 按钮 Ctrl+P 按下 M+ 按钮 Ctrl+M 按下 MS 按钮 Ctrl+R 按下 MR 按钮 Ctrl+L 按下 MC 按钮 % 按下 % 按钮 F9 按下 +/– 按钮 / 按下 / 按钮 * 按下 * 按钮 + 按下 + 按钮 - 按下 – 按钮 R 按下 1/× 按钮 @ 按下平方根按钮 0-9 按下数字按钮 (0-9) = 按下 = 按钮 . 按下 .（小数点）按钮 Backspace 按下 Backspace 按钮 Esc 按下 C 按钮 Del 按下 CE 按钮 Ctrl+Shift+D 清除计算历史记录 F2 编辑计算历史记录 向上箭头键 在计算历史记录中向上导航 向下箭头键 在计算历史记录中向下导航 Esc 取消编辑计算历史记录 Enter 编辑后重新计算计算历史记录 F3 在科学型模式下选择“角度” F4 在科学型模式下选择“弧度” F5 在科学型模式下选择“梯度” I 在科学型模式下按 Inv 按钮 D 在科学型模式下按 Mod 按钮 Ctrl+S 在科学型模式下按 sinh 按钮 Ctrl+O 在科学型模式下按 cosh 按钮 Ctrl+T 在科学型模式下按 tanh 按钮 ( 在科学型模式下按 ( 按钮 ) 在科学型模式下按 ) 按钮 N 在科学型模式下按 ln 按钮 ; 在科学型模式下按 Int 按钮 S 在科学型模式下按 sin 按钮 O 在科学型模式下按 cos 按钮 T 在科学型模式下按 tan 按钮 M 在科学型模式下按 dms 按钮 P 在科学型模式下按 pi 按钮 V 在科学型模式下按 F-E 按钮 X 在科学型模式下按 Exp 按钮 Q 在科学型模式下按 x^2 按钮 Y 在科学型模式下按 x^y 按钮 # 在科学型模式下按 x^3 按钮 L 在科学型模式下按 log 按钮 ! 在科学型模式下按 n! 按钮 Ctrl+Y 在科学型模式下按 y√x 按钮 Ctrl+B 在科学型模式下按 3√x 按钮 Ctrl+G 在科学型模式下按 10x 按钮 F5 在程序员模式下选择 Hex F6 在程序员模式下选择 Dec F7 在程序员模式下选择 Oct F8 在程序员模式下选择 Bin F12 在程序员模式下选择 Qword F2 在程序员模式下选择 Dword F3 在程序员模式下选择 Word F4 在程序员模式下选择 Byte K 在程序员模式下按 RoR 按钮 J 在程序员模式下按 RoL 按钮 % 在程序员模式下按 Mod 按钮 ( 在程序员模式下按 ( 按钮 ) 在程序员模式下按 ) 按钮 | 在程序员模式下按 Or 按钮 ^ 在程序员模式下按 Xor 按钮 ~ 在程序员模式下按 Not 按钮 & 在程序员模式下按 And 按钮 A-F 在程序员模式下按 A-F 按钮 空格键 在程序员模式下切换位值 A 在统计信息模式下按 Average 按钮 Ctrl+A 在统计信息模式下按 Average Sq 按钮 S 在统计信息模式下按 Sum 按钮 Ctrl+S 在统计信息模式下按 Sum Sq 按钮 T 在统计信息模式下按 S.D. 按钮 Ctrl+T 在统计信息模式下按 Inv S.D. 按钮 D 在统计信息模式下按 CAD 按钮
+
+11\. Windows 日记本键盘快捷方式
+----------------------
+
+下表包含了使用 Windows 日记的键盘快捷方式。 按键 功能 Ctrl+N 开始新的便笺 Ctrl+O 打开最近使用的便笺 Ctrl+S 将更改保存到便笺 Ctrl+Shift+V 将便笺移动到特定的文件夹 Ctrl+P 打印便笺 Alt+F4 关闭便笺及其日记本窗口 Ctrl+Z 撤消更改 Ctrl+Y 恢复更改 Ctrl+A 选择页面上的所有项目 Ctrl+X 剪切选择内容 Ctrl+C 将选择内容复制到剪贴板 Ctrl+V 从剪贴板粘贴选择内容 Esc 取消某个选择 Delete 删除某个选择 Ctrl+F 开始基本查找 Ctrl+G 转到页面 F5 刷新查找结果 F5 刷新便笺列表 F6 在便笺列表和便笺之间切换 Ctrl+Shift+C 显示便笺列表中列标题的快捷菜单 F11 以全屏模式查看便笺 F1 打开“日记本”帮助
+
+12\. Windows 帮助查看器键盘快捷方式
+------------------------
+
+下表包含了帮助查看器使用的键盘快捷方式。 按键 功能 Alt+C 显示目录 Alt+N 显示“连接设置”菜单 F10 显示“选项”菜单 Alt+向左键 返回先前查看过的主题 Alt+向右键 向前移动到下一个（先前已查看过的）主题 Alt+A 显示客户支持页面 Alt+Home 显示帮助和支持主页 Home 移动到主题的开头 End 移动到主题的末尾 Ctrl+F 搜索当前主题 Ctrl+P 打印主题 F3 将光标移动到搜索框
+
+### 附录：注释
+
+[\[1\]](http://xbeta.info/windows-7-shortcuts.htm#ref1)：参见在线英文版 [Windows 7 Keyboard shortcuts ](http://windows.microsoft.com/en-US/Windows7/Keyboard-shortcuts). [\[2\]](http://xbeta.info/windows-7-shortcuts.htm#ref2)：当初组织翻译时，只搜过网上内容以避免重复翻译，忽略了自带的帮助文件。但无论如何，以我的经验，翻译是比阅读最有效的学习方式——某种程度可以说，学习速度与效果是成反比的。

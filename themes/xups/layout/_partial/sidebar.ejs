@@ -1,0 +1,28 @@
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <ul class="widget-bd">
+            <% site.categories.forEach(function(cat){ %>
+            <li>
+                <a href="<%= url_for(cat.path) %>"><%= cat.name %></a>
+                <span class="badge">(<%= cat.length %>)</span>
+            </li>
+            <% }); %>
+        </ul>
+    </section>
+
+    <% if (theme.tagcloud) { %>
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <div class="widget-bd tag-wrap">
+            <% site.tags.forEach(function (tag, index) { %>
+                <% if (index < 39) { %>
+                <a class="tag-item" href="<%= url_for(tag.path) %>" title="<%= tag.name %>">
+                    <%- tag.name %> (<%- tag.length %>)
+                </a>
+                <% } %>
+            <% }); %>
+        </div>
+    </section>
+    <% } %>
+</aside>

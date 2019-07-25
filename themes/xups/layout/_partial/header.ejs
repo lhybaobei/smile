@@ -1,0 +1,20 @@
+<header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="<%- url_for() %>">
+                <div class="cover">
+                    <span class="name"><%= config.title %></span>
+                </div>
+            </a>
+        </div>
+        <ul class="menu hidden">
+            <% for (var i in theme.menu) { %>
+            <li rel="<%= url_for(path) %>" class="item <%= url_for(theme.menu[i].link) == url_for(path).substring(0, url_for(path).lastIndexOf('/') + 1) ? 'current' : ''   %>">
+                <a href="<%= url_for(theme.menu[i].link) %>" title="<%= theme.menu[i].name %>" class="<%= theme.menu[i].icon %>">&nbsp;<%= theme.menu[i].name %></a>
+            </li>
+            <% } %>
+        </ul>
+        <div class="profile clearfix">
+        </div>
+    </section>
+</header>

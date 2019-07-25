@@ -1,0 +1,41 @@
+<% if (index == true) { %>
+    <h3 class="widget-hd">
+        <strong>
+            <% if (pagination == 2) { %>
+                最近动态
+            <% } else if (pagination == 3) { %>
+                文章归档
+            <% } else if (pagination == 4) { %>
+                `<%- page.category %>`分类下的文章
+            <% } else if (pagination == 5) { %>
+                `<%- page.tag %>`标签下的文章
+            <% } %>
+        </strong>
+    </h3>
+    <% if (pagination == 2) { %>
+        <% page.posts.each(function(post) { %>
+            <%- partial('post-item', { post: post }) %>
+        <% }) %>
+    <% } else if (page.posts && page.posts.length) { %>
+        <% _.map(_.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')}), function(list, year) { %>
+            <h2><%- -year %></h2>
+            <ul class="archive-list">
+            <% list.forEach(function(post) { %>
+                <li>
+                    <span><%- post.date.format(config.date_format) %></span>
+                    <a href="<%- url_for(post.permalink) %>"><%- post.title %></a>
+                </li>
+            <% }) %>
+            </ul>
+        <% }) %>
+    <% } %>
+
+    <% if (page.total > 1){ %>
+    <nav class="page-navigator">
+        <%- paginator({
+            prev_text: '前一页',
+            next_text: '后一页'
+        }) %>
+    </nav>
+    <% } %>
+<% } %>

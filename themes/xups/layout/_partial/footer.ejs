@@ -1,0 +1,16 @@
+<footer class="footer">
+    &copy; 2009-<%- new Date().getFullYear() %>
+    <a href="<%- url_for() %>"><%- config.title %></a>
+</footer>
+<div class="to-top" title="返回顶部">
+    <i class="icon-top"></i>
+</div>
+<script src='//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js' defer)></script>
+<% if (is_post()) { %>
+    <script src='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js' defer></script>
+<% } %>
+<% if (env.env === 'production') { %>
+    <script src='//cdn.jsdelivr.net/gh/lhybaobei/smile/js/theme.min.js' defer></script>
+<% } else { %>
+    <script src='/js/theme.js' defer></script>
+<% } %>

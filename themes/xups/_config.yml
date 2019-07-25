@@ -1,0 +1,26 @@
+#############################
+# Xups for Hexo 主题配置文件
+# Jelon
+# https://jelon.top
+#############################
+
+#----------------------------
+# 头部导航
+#----------------------------
+menu:
+  home:
+    name: 首页
+    link: /
+    icon: icon-home
+  archive:
+    name: 归档
+    link: /archives
+    icon: icon-archive
+  about:
+    name: 关于
+    link: /about/
+    icon: icon-about
+
+share: true
+
+tagcloud: true
