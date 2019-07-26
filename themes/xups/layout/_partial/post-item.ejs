@@ -21,7 +21,7 @@
         </h3>
     </header>
     <p class="post-meta">
-        <%- post.author || 'Jelon' %> 发表于
+        <%- config.author %> 发表于
         <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
         <span class="post-tags">
             标签：

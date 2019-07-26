@@ -24,11 +24,11 @@
     <link rel="shortcut icon" href="<%- url_for(config.favicon) %>" >
 <% } %>
 <% if (env.env === 'production') { %>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/lhybaobei/smile/css/theme.min.css")
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/lhybaobei/smile/css/theme.min.css">
 <% } else { %>
     <%- css('css/theme') %>
 <% } %>
 <% if (is_post()) { %>
-    <link rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 <% } %>
 </head>

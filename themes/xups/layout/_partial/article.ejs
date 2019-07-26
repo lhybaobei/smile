@@ -4,7 +4,7 @@
         <h3 class="post-title"><span><%= post.title %></span></h3>
     </header>
     <p class="post-meta text-center">
-        <%- post.author || 'Jelon' %> 发表于
+        <%- config.author %> 发表于
         <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
     </p>
     <div class="post-content">
