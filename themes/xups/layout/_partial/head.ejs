@@ -20,9 +20,7 @@
     %>
     <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
-<% if (config.favicon) { %>
-    <link rel="shortcut icon" href="<%- url_for(config.favicon) %>" >
-<% } %>
+    <link rel="shortcut icon" href="favicon.png">
 <% if (env.env === 'production') { %>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/lhybaobei/smile/css/theme.min.css">
 <% } else { %>
