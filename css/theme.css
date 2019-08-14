@@ -836,7 +836,7 @@ pre .javascript .function {
 .article-share {
   padding: 0 0 15px;
 }
-.article-share .share-area {
+.article-share .share-box {
   margin: 0 auto;
   padding-left: 10px;
   text-align: left;
@@ -923,7 +923,7 @@ pre .javascript .function {
 .footer a {
   color: #aaa;
 }
-.back-to-top {
+.to-top {
   display: none;
   border-radius: 4px;
   position: fixed;
